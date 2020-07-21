@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E4254C9E-E014-4870-BDC8-DFF5BA125B1C}</ProjectGuid>
+    <Description>iOS toolbar extensions for Xamarin.Forms (left hand toolbar items, and Android:esque secondary toolbar menu)</Description>
+    <PackageId>IOSToolbarExtensions</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>Tommi Kiviniemi</Authors>
+    <DevelopmentDependency>false</DevelopmentDependency>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>IOSToolbarExtensions</RootNamespace>
+    <UsePartialTypes>false</UsePartialTypes>
+    <AssemblyName>IOSToolbarExtensions.NuGet</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <Owners>Tommi Kiviniemi</Owners>
+    <Title>IOSToolbarExtensions</Title>
+    <Summary>iOS toolbar extensions for Xamarin.Forms (left hand toolbar items, and Android:esque secondary toolbar menu)</Summary>
+    <Copyright>Copyright © 2020</Copyright>
+    <PackageTags>Toolbar, Renderer, Xamarin, Xamarin.Forms, iOS, Xamarin.iOS</PackageTags>
+    <PackageProjectUrl>https://github.com/Tommigun1980/IOSToolbarExtensions</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/Tommigun1980/IOSToolbarExtensions/blob/master/LICENSE</PackageLicenseUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>bin\Debug</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IOSToolbarExtensions.iOS\IOSToolbarExtensions.iOS.csproj">
+      <Project>{4133C1AF-6846-49B2-ADAB-98C39FE84493}</Project>
+      <Name>IOSToolbarExtensions.iOS</Name>
+      <ReferenceSourceTarget>ProjectReference</ReferenceSourceTarget>
+    </ProjectReference>
+    <ProjectReference Include="..\iOSToolbarExtensions\iOSToolbarExtensions.csproj">
+      <Project>{F43CED7D-D378-4EBC-BE94-CB0B80CB0148}</Project>
+      <Name>iOSToolbarExtensions</Name>
+      <SkipGetTargetFrameworkProperties></SkipGetTargetFrameworkProperties>
+      <AdditionalProperties></AdditionalProperties>
+      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NuGet.Build.Packaging">
+      <Version>0.2.5-pr172.11</Version>
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets')" />
+</Project>
