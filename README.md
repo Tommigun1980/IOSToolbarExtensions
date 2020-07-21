@@ -46,13 +46,11 @@ Example:
 
 ### Configuration
 
-To turn off left-hand toolbar item rendering, call
+This feature is turned on by default. To turn off left-hand toolbar item rendering, call the following in your Xamarin.iOS project:
 
 ```c#
 IOSToolbarExtensions.iOS.Renderers.IOSToolbarExtensionsContentPageRenderer.EnablePrimaryLeftHandToolbarItemRendering = false;
 ```
-
-in your Xamarin.iOS project.
 
 ## Android:esque Secondary Toolbar Item Menu Bar
 
@@ -75,13 +73,11 @@ For posterity, here is an example of a Secondary toolbar item with text and no i
 
 ### Configuration
 
-To turn off Android:esque secondary toolbar item rendering, call
+This feature is turned on by default. To turn off Android:esque secondary toolbar item rendering, call the following in your Xamarin.iOS project:
 
 ```xaml
 IOSToolbarExtensions.iOS.Renderers.IOSToolbarExtensionsContentPageRenderer.EnableSecondaryToolbarRendering = false;
 ```
-
-in your Xamarin.iOS project.
 
 If need be, you can customize rendering of the menu by setting properties of your choice in the
 
@@ -102,6 +98,12 @@ public float ShadowRadius { get; set; } = 4.0f;
 public float ShadowOffsetX { get; set; } = 0.0f;
 public float ShadowOffsetY { get; set; } = 0.0f;
 public UIFont Font { get; set; } = UIFont.PreferredCallout;
+```
+
+Example; change the toolbar's icon to a downloaded image:
+
+```c#
+IOSToolbarExtensions.iOS.Renderers.IOSToolbarExtensionsContentPageRenderer.SecondaryToolbarUserSettings.Icon = "https://someurl.com/someimage.png";
 ```
 
 ## Acknowledgements
