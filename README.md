@@ -79,15 +79,13 @@ This feature is turned on by default. To turn off Android:esque secondary toolba
 IOSToolbarExtensions.iOS.Renderers.IOSToolbarExtensionsContentPageRenderer.EnableSecondaryToolbarRendering = false;
 ```
 
-If need be, you can customize rendering of the menu by setting properties of your choice in the
+If need be, you can customize rendering of the menu by assigning properties of your choice in your Xamarin.iOS project to the following object:
 
 ```c#
 IOSToolbarExtensions.iOS.Renderers.IOSToolbarExtensionsContentPageRenderer.SecondaryToolbarUserSettings
 ```
 
-object in your Xamarin.iOS project.
-
-The editable properties are
+The editable properties are:
 
 ```c#
 public string Icon { get; set; } = "more.png"; // this represents the icon for the menu, and defaults to an embedded resource with three dots. the value is assigned to a ToolbarItem's IconImageSource, so it can be a resource name or a url.
@@ -100,7 +98,7 @@ public float ShadowOffsetY { get; set; } = 0.0f;
 public UIFont Font { get; set; } = UIFont.PreferredCallout;
 ```
 
-Example; change the toolbar's icon to a downloaded image:
+Example - change the toolbar's icon to a downloaded image:
 
 ```c#
 IOSToolbarExtensions.iOS.Renderers.IOSToolbarExtensionsContentPageRenderer.SecondaryToolbarUserSettings.Icon = "https://someurl.com/someimage.png";
