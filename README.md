@@ -56,7 +56,7 @@ in your Xamarin.iOS project.
 
 ## Android:esque Secondary Toolbar Item Menu Bar
 
-Xamarin.Forms renders secondary toolbar items on iOS in a way that is quite unusable. IOSToolbarExtensions remedies this by rendering any secondary toolbar items in a way very similar to how Android does it natively.
+Xamarin.Forms renders secondary toolbar items on iOS in a way that is quite unusable. IOSToolbarExtensions remedies this by rendering any secondary toolbar items in a way very similar to how Android does it natively. Native Android's secondary item drawing is unaffected by this.
 
 ### Usage (XAML)
 
