@@ -62,7 +62,7 @@ Xamarin.Forms renders secondary toolbar items on iOS in a way that is quite unus
 
 There are no special steps to this as the custom renderer will draw any Secondary toolbar items in a nicer menu on iOS without any additional setup.
 
-For posterity, here is an example of a Secondary toolbar item:
+For posterity, here is an example of a Secondary toolbar item with text and no icon:
 
 ```xaml
   <ContentPage.ToolbarItems>
@@ -94,8 +94,8 @@ object in your Xamarin.iOS project.
 The editable properties are
 
 ```c#
-public string Icon { get; set; } = "more.png";
-public float RowHeight { get; set; } = -1; // if <= 0, height will be calculated as font height * 2, else height will be assigned to this value
+public string Icon { get; set; } = "more.png"; // this represents the icon for the menu, and defaults to an embedded resource with three dots. the value is assigned to a ToolbarItem's IconImageSource, so it can be a resource name or a url.
+public float RowHeight { get; set; } = -1; // if <= 0, height will be calculated as font height * 2, else height will be assigned to this value.
 public float ColumnWidth { get; set; } = 200.0f;
 public float ShadowOpacity { get; set; } = 0.7f;
 public float ShadowRadius { get; set; } = 4.0f;
