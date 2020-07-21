@@ -95,7 +95,7 @@ The editable properties are
 
 ```c#
 public string Icon { get; set; } = "more.png";
-public float RowHeight { get; set; } = -1;
+public float RowHeight { get; set; } = -1; // if <= 0, height will be calculated as font height * 2, else height will be assigned to this value
 public float ColumnWidth { get; set; } = 200.0f;
 public float ShadowOpacity { get; set; } = 0.7f;
 public float ShadowRadius { get; set; } = 4.0f;
