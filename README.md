@@ -104,6 +104,10 @@ Example - change the toolbar's icon to a downloaded image:
 IOSToolbarExtensions.iOS.Renderers.IOSToolbarExtensionsContentPageRenderer.SecondaryToolbarUserSettings.Icon = "https://someurl.com/someimage.png";
 ```
 
+## Known issues
+
+Xamarin.Forms's issue https://github.com/xamarin/Xamarin.Forms/issues/6387 prevents url-based images from being used in the toolbar items. Url-based image sources will crash on iOS one time after installation when displaying the extended toolbar menu. Consider using images bundled with your app until the aforementioned issue is fixed.
+
 ## Acknowledgements
 
 The Android:esque secondary toolbar menu item bar was inspired by https://github.com/AmitManchanda/iOSSecondaryToolbarMenubar, by https://github.com/AmitManchanda.
